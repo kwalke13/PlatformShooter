@@ -31,6 +31,7 @@
     <object>objects\obj_gameCon</object>
     <object>objects\obj_bullet_case</object>
     <object>objects\obj_camCon</object>
+    <object>objects\obj_screenshake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>

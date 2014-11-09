@@ -64,9 +64,10 @@ wep="rifle";
             <string>/// Platform Physics
 
 
-var rkey = keyboard_check(ord('D'));
-var lkey = keyboard_check(ord('A'));
-var jkey = keyboard_check(ord('W'));
+var rkey = gamepad_button_check(0,gp_padr) || keyboard_check(ord('D'));
+//var lkey = keyboard_check(ord('A'));
+var lkey = gamepad_button_check(0,gp_padl) || keyboard_check(ord('A'));
+var jkey = gamepad_button_check(0,gp_face1) || keyboard_check(ord('W'));
 
 
 // Check for the ground
@@ -153,11 +154,11 @@ else{
 //}else if(xprevious&gt;x){
 //    image_xscale=-1;
 //}
-if(keyboard_check(vk_left)){
+if(keyboard_check(vk_left) || gamepad_axis_value(0,gp_axisrh)&lt;0){
     image_xscale=-1;
     facing="left";
 }
-else if(keyboard_check(vk_right)){
+else if(keyboard_check(vk_right) || gamepad_axis_value(0,gp_axisrh)&gt;0){
     image_xscale=1;
     facing="right";
 }

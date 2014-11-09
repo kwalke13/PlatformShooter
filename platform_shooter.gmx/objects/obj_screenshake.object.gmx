@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>camDir=100;
+            <string>currentx=view_xview[0];
+currenty=view_yview[0];
 </string>
           </argument>
         </arguments>
@@ -48,57 +49,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_xview[0]+=camDir;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// update direction
-
-if keyboard_check(vk_left) || gamepad_axis_value(0,gp_axisrh) &lt; 0
-    camDir=-100;
+            <string>type = floor(random(4));
+movement = floor(random(4)+1);
+//show_message(string(type));
+if(type==0)
+    view_xview += movement;
+else if(type==1)
+    view_yview += movement;
+else if(type==2)
+    view_xview += movement;
+else if(type==3)
+    view_yview -= movement;
     
-else if keyboard_check(vk_right) || gamepad_axis_value(0,gp_axisrh)&gt; 0
-    camDir=100;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>draw_text(20,20,string(gamepad_axis_value(0,gp_axisrh)));
+    
+instance_destroy();
+//view_xview[0]=currentx;
+//view_yview[0]=currenty;
 </string>
           </argument>
         </arguments>
