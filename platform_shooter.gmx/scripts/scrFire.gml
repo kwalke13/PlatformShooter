@@ -8,20 +8,22 @@ weapon= string(wep[@ index]);
 kick = wep_kick[@ index];
 
 if(weapon=="rifle"){
+    audio_play_sound(snd_machine_gun_shoot,10,0);
     instance_create(x,y,obj_bullet);
     instance_create(x,y,obj_bullet_case);
 }
-else if(weapon=="tripleMachineGun"){
+else if(weapon=="minigun"){
+    audio_play_sound(snd_machine_gun_shoot,10,0);
     instance_create(x,y,obj_bullet);
     instance_create(x,y,obj_bullet_case);
-    //show_message("fire triple");
-    //for(i=0;i<3;i++){
-     //   first=instance_create(x,y,obj_bullet);
-     //   dir=obj_player.direction;
-    //    first.direction=dir+random(20);
-   // }
+
 }
 
+if(weapon=="grenader"){
+    audio_play_sound(snd_grenade_pop,10,0);
+    instance_create(x,y,obj_grenade);
+    //instance_create(x,y,obj_bullet_case);
+}
 
 
 
