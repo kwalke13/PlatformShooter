@@ -29,8 +29,7 @@
 
 camCon=instance_create(0,0,obj_camCon);
 
-
-
+gameOver=false;
 </string>
           </argument>
         </arguments>
@@ -53,10 +52,18 @@ camCon=instance_create(0,0,obj_camCon);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// global button presses
+            <string>/// global button presses &amp; win
 
 if keyboard_check_released(vk_backspace) || gamepad_button_check_released(0,gp_start)
     room_restart();
+    
+    
+    
+//WIN
+if(instance_number(obj_spawner)==0 &amp;&amp; instance_number(obj_enemy)==0 &amp;&amp; gameOver==false){
+    instance_create(obj_player.x,obj_player.y,obj_win);
+    gameOver=true;
+}
 </string>
           </argument>
         </arguments>

@@ -37,10 +37,15 @@ wep_spr[1]=spr_minigun;
 wep_kick[1]=5;
 wep_rate[1]=1;
 
-wep[2]="grenader";
-wep_spr[2]=spr_grenader;
-wep_kick[2]=10;
-wep_rate[2]=20;
+//wep[2]="grenader";
+//wep_spr[2]=spr_grenader;
+//wep_kick[2]=10;
+//wep_rate[2]=20;
+
+wep[2]="pistol";
+wep_spr[2]=spr_pistol;
+wep_kick[2]=1;
+wep_rate[2]=10;
 
 counter=0;
 max_counter=2;
@@ -208,7 +213,7 @@ sprite_index=wep_spr[counter];
           <argument>
             <kind>1</kind>
             <string>draw_self();
-draw_text(x,y+20,"counter: "+string(counter));
+//draw_text(x,y+20,"counter: "+string(counter));
 </string>
           </argument>
         </arguments>

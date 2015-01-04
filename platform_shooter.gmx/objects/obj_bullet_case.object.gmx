@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>start_y=obj_player.y;
 max_y= start_y-20;
-spd=6;
-hspd=3;
+spd=4;
+hspd=2;
 
 grav=false;
 </string>
@@ -56,14 +56,14 @@ grav=false;
             <string>if(grav==true){
     if(!place_meeting(x,y+spd,obj_solid)){
         y+=spd;
-        if(!place_meeting(x-hspd,y,obj_solid) &amp;&amp; !place_meeting(x+hspd,y,obj_solid)){
-            if(obj_player.facing=="right")
-                x-=hspd;
-            else
-                x+=hspd;
-        }
-        else
-            x+=0;
+        //if(!place_meeting(x-hspd,y,obj_solid) &amp;&amp; !place_meeting(x+hspd,y,obj_solid)){
+         //   if(obj_player.facing=="right")
+          //      x-=hspd;
+          //  else
+          //      x+=hspd;
+        //}
+        //else
+          //  x+=0;
         
     }
 }
@@ -73,14 +73,14 @@ else{
     }
     else{
         y-=spd;
-          if(!place_meeting(x-hspd,y,obj_solid) &amp;&amp; !place_meeting(x+hspd,y,obj_solid)){
-            if(obj_player.facing=="right")
-                x-=hspd;
-            else
-                x+=hspd;
-        }
-        else
-            x+=0;
+          //if(!place_meeting(x-hspd,y,obj_solid) &amp;&amp; !place_meeting(x+hspd,y,obj_solid)){
+            //if(obj_player.facing=="right")
+            //    x-=hspd;
+           // else
+           //     x+=hspd;
+        //}
+       // else
+         //   x+=0;
     }
 }
 </string>

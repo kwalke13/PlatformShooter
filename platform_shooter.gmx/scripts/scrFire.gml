@@ -7,6 +7,8 @@ wep_kick = obj_gunCon.wep_kick;
 weapon= string(wep[@ index]);
 kick = wep_kick[@ index];
 
+instance_create(obj_player.x,obj_player.y,obj_screenshake);
+
 if(weapon=="rifle"){
     audio_play_sound(snd_machine_gun_shoot,10,0);
     instance_create(x,y,obj_bullet);
@@ -19,12 +21,18 @@ else if(weapon=="minigun"){
 
 }
 
-if(weapon=="grenader"){
+else if(weapon=="grenader"){
     audio_play_sound(snd_grenade_pop,10,0);
     instance_create(x,y,obj_grenade);
     //instance_create(x,y,obj_bullet_case);
 }
 
+else if(weapon=="pistol"){
+    audio_play_sound(snd_machine_gun_shoot,10,0);
+    instance_create(x,y,obj_bullet);
+    instance_create(x,y,obj_bullet_case);
+
+}
 
 
 

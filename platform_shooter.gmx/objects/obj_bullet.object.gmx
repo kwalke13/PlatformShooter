@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>spd=20;
+            <string>spd=12;
 image_speed=.8;
 
 facing=obj_player.facing;
@@ -59,7 +59,7 @@ if(image_index &gt;2){
 
 
 
-if(place_meeting(x+spd,y,obj_solid)){
+if(collision_rectangle(x-sprite_width/2,y-sprite_height/2,x+sprite_width/2,y+sprite_height/2,obj_solid,1,0) || collision_rectangle(x-sprite_width/2,y-sprite_height/2,x+sprite_width/2,y+sprite_height/2,obj_enemy,1,0)){
     instance_destroy();
 }
 else{

@@ -17,8 +17,8 @@
       <sprite>sprites\spr_grenade</sprite>
       <sprite>sprites\spr_explosion</sprite>
       <sprite>sprites\spr_grenader</sprite>
-      <sprite>sprites\spr_minigun</sprite>
-      <sprite>sprites\spr_rifle</sprite>
+      <sprite>sprites\spr_minigun_OLD</sprite>
+      <sprite>sprites\spr_rifle_OLD</sprite>
     </sprites>
     <sprites name="Solids">
       <sprite>sprites\spr_destroyedWall</sprite>
@@ -29,8 +29,36 @@
       <sprite>sprites\spr_player_walking</sprite>
       <sprite>sprites\spr_player_idle</sprite>
     </sprites>
+    <sprite>sprites\spr_solid</sprite>
+    <sprite>sprites\spr_alex_idle</sprite>
+    <sprite>sprites\spr_alex_run</sprite>
+    <sprite>sprites\spr_rifle</sprite>
+    <sprite>sprites\spr_minigun</sprite>
+    <sprite>sprites\spr_pistol</sprite>
+    <sprite>sprites\spr_enemy_test</sprite>
+    <sprite>sprites\spr_zombie_dead</sprite>
+    <sprite>sprites\spr_zombie</sprite>
+    <sprite>sprites\spr_enemy_spawn</sprite>
+    <sprite>sprites\spr_bop</sprite>
+    <sprite>sprites\spr_blood</sprite>
+    <sprite>sprites\spr_dead</sprite>
+    <sprite>sprites\spr_reset</sprite>
+    <sprite>sprites\spr_win</sprite>
+    <sprite>sprites\spr_character_select</sprite>
+    <sprite>sprites\spr_right_arrow</sprite>
+    <sprite>sprites\spr_left_arrow</sprite>
+    <sprite>sprites\spr_continue</sprite>
+    <sprite>sprites\spr_stephen_idle</sprite>
+    <sprite>sprites\spr_stephen_run</sprite>
+    <sprite>sprites\spr_elliot_run</sprite>
+    <sprite>sprites\spr_kyle_run</sprite>
+    <sprite>sprites\spr_elliot_idle</sprite>
+    <sprite>sprites\spr_kyle_idle</sprite>
+    <sprite>sprites\spr_difficulty</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\tileset</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scrFire.gml</script>
@@ -40,6 +68,8 @@
       <object>objects\obj_player</object>
     </objects>
     <objects name="Controllers">
+      <object>objects\obj_restart</object>
+      <object>objects\obj_win</object>
       <object>objects\obj_camCon</object>
       <object>objects\obj_gunCon</object>
       <object>objects\obj_gameCon</object>
@@ -59,9 +89,27 @@
     </objects>
     <objects name="Effects">
       <object>objects\obj_screenshake</object>
+      <object>objects\obj_blood</object>
+    </objects>
+    <objects name="Enemy">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_zombie</object>
+      <object>objects\obj_dead_enemy</object>
+      <object>objects\obj_spawner</object>
+      <object>objects\obj_bop</object>
+    </objects>
+    <objects name="Menu">
+      <object>objects\obj_left_arrow</object>
+      <object>objects\obj_right_arrow</object>
+      <object>objects\obj_character_select</object>
+      <object>objects\obj_continue</object>
+      <object>objects\obj_difficulty</object>
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Menu</room>
+    <room>rooms\Difficulty</room>
+    <room>rooms\Game</room>
     <room>rooms\room0</room>
   </rooms>
   <help>
